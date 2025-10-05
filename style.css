@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit";
+  color: rgb(240, 240, 240);
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(48, 48, 48);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  padding: 1em 2em 1.4em 2em;
+  background-color: rgb(36, 36, 36, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+header h1 {
+  font-size: 2.4em;
+  font-weight: 500;
+  color: rgb(240, 240, 240);
+}
+
+header a {
+  font-size: 1.4em;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0.4em;
+  color: rgb(220, 220, 220);
+}
+
+header a:hover {
+  color: white;
+}
+
+main {
+  flex-grow: 1;
+  margin: 6em 2em 2em 2em;
+}
+
+#about-me-technologies {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2em;
+}
+
+#about-me-technologies h1,
+#about-me-technologies h2 {
+  font-size: 2.6em;
+  margin-bottom: 0.2em;
+}
+
+#about-me-technologies p {
+  font-size: 1.2em;
+}
+
+#tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#tech-grid div {
+  padding: 0.3em 1.2em;
+  margin: 0.2em 0.8em;
+  display: flex;
+  align-items: center;
+}
+
+#tech-grid img {
+  width: 42px;
+  height: 42px;
+}
+
+#tech-grid span {
+  margin: 0 0 0 0.4em;
+  font-size: 1.2em;
+}
+
+/*game demo*/
+#game-demo{
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#game-demo h2{
+  font-size: 2em;
+}
+
+#game-demo p{
+  font-size: 1.2em;
+  margin-top: 0.4em;
+}
+
+#game-demo video{
+  margin-top: 0.6em;
+}
+
+#portfolio {
+  margin-top: 3em;
+}
+
+#portfolio section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+#portfolio img {
+  width: 10em;
+  height: 10em;
+}
+
+#portfolio article {
+  background-color: rgb(40, 40, 40);
+  padding: 1em;
+  border-radius: 4px;
+  display: flex;
+}
+
+#portfolio article:hover {
+  background-color: rgb(32, 32, 32);
+}
+
+#portfolio div {
+  margin-left: 1em;
+}
+
+#portfolio h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+#portfolio h3 {
+  font-size: 1.6em;
+  margin-bottom: 0.2em;
+}
+
+footer {
+  background-color: rgb(36, 36, 36);
+  color: white;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p,
+footer a {
+  color: rgb(112, 112, 112);
+}
+
+footer a:hover {
+  color: rgb(224, 224, 224);
+  text-decoration: underline;
+}
