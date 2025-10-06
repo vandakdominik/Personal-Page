@@ -91,26 +91,27 @@ main {
 }
 
 /*game demo*/
-#game-demo{
+.video-demo {
   margin-top: 3em;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#game-demo h2{
+.video-demo h2 {
   font-size: 2em;
 }
 
-#game-demo p{
+.video-demo p {
   font-size: 1.2em;
   margin-top: 0.4em;
 }
 
-#game-demo video{
+.video-demo video {
   margin-top: 0.6em;
 }
 
+/*portfolio*/
 #portfolio {
   margin-top: 3em;
 }
