@@ -90,7 +90,8 @@ main {
   font-size: 1.2em;
 }
 
-/*game demo*/
+/*videos demo*/
+/*
 .video-demo {
   margin-top: 3em;
   display: flex;
@@ -98,17 +99,46 @@ main {
   align-items: center;
 }
 
-.video-demo h2 {
-  font-size: 2em;
-}
-
 .video-demo p {
   font-size: 1.2em;
   margin-top: 0.4em;
 }
+*/
 
-.video-demo video {
-  margin-top: 0.6em;
+.video-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-section h2 {
+  font-size: 2em;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 1fr;
+}
+
+.prev-video,
+.video,
+.next-video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-player video {
+  width: 100%;
+}
+
+.video-section button {
+  border: none;
+  background-color: transparent;
+}
+
+.video-section button img {
+  width: 100%;
 }
 
 /*portfolio*/
@@ -153,6 +183,7 @@ main {
   margin-bottom: 0.2em;
 }
 
+/*footer*/
 footer {
   background-color: rgb(36, 36, 36);
   color: white;
