@@ -17,6 +17,11 @@ body {
   background-color: rgb(48, 48, 48);
 }
 
+h2 {
+  font-size: 2.6em;
+  margin-bottom: 0.2em;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -58,6 +63,16 @@ main {
   column-gap: 2em;
 }
 
+@media(max-width: 1000px){
+  #about-me-technologies {
+  grid-template-columns: 1fr;
+  }
+
+  #technologies {
+    margin-top: 4em;
+  }
+}
+
 #about-me-technologies h1,
 #about-me-technologies h2 {
   font-size: 2.6em;
@@ -91,117 +106,31 @@ main {
   font-size: 1.2em;
 }
 
-/*videos demo*/
-/*
-.video-demo p {
-  margin-top: 0.4em;
-}
-*/
-
-.video-section {
+#galery {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 3em;
+  margin-top: 4em;
 }
 
-.video-section h2 {
-  font-size: 2em;
-}
-
-.video-section p {
-  font-size: 1.2em;
-}
-
-.video-grid {
+.grid {
   display: grid;
-  grid-template-columns: 1fr 2.5fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 0.5em;
+  row-gap: 0.5em;
 }
 
-.prev-video,
-.video,
-.next-video {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.video{
-  margin: 0.4em 1em 0 1em;
-}
-
-.video-player video, .video-player img {
-  width: 100%;
-}
-
-.video-section button {
-  background-color: transparent;
-}
-
-.video-section button img {
-  width: 100%;
-}
-
-/*portfolio*/
-#portfolio {
-  margin-top: 3em;
-}
-
-#portfolio section {
-  display: grid;
+@media(max-width: 1000px){
+  .grid {
   grid-template-columns: 1fr 1fr;
-  row-gap: 10px;
-  column-gap: 10px;
+  }
 }
 
-#portfolio img {
-  width: 10em;
-  height: 10em;
+@media(max-width: 600px){
+  .grid {
+  grid-template-columns: 1fr;
+  }
 }
 
-#portfolio article {
-  background-color: rgb(40, 40, 40);
-  padding: 1em;
-  border-radius: 4px;
-  display: flex;
-}
-
-#portfolio article:hover {
-  background-color: rgb(32, 32, 32);
-}
-
-#portfolio div {
-  margin-left: 1em;
-}
-
-#portfolio h2 {
-  font-size: 2em;
-  margin-bottom: 1em;
-}
-
-#portfolio h3 {
-  font-size: 1.6em;
-  margin-bottom: 0.2em;
-}
-
-/*footer*/
-footer {
-  background-color: rgb(36, 36, 36);
-  color: white;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-footer p,
-footer a {
-  color: rgb(112, 112, 112);
-}
-
-footer a:hover {
-  color: rgb(224, 224, 224);
-  text-decoration: underline;
+.grid img {
+  width: 100%;
 }
