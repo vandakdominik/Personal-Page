@@ -17,15 +17,10 @@
   <body>
     <header>
       <h1>Dominik Vandák</h1>
-      <nav>
-        <a href="">About Me & Technologies</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-      </nav>
     </header>
     <main>
       <section id="about-me-technologies">
-        <article>
+        <article id="about-me">
           <h1>
             Full Stack<br />
             Web Developer
@@ -36,7 +31,7 @@
             development but know my way around backend too.
           </p>
         </article>
-        <article>
+        <article id="technologies">
           <h2>Technologies:</h2>
           <div id="tech-grid">
             <div>
@@ -90,57 +85,16 @@
         </article>
       </section>
 
-      <section id="game-demo" class="video-demo">
-        <h2>3D Game Demo</h2>
-        <p>3D Dungeon Enviroment Objects</p>
-        <video width="800" controls>
-          <source src="./game-demo.mp4" type="video/mp4" />
-          Video Error
-        </video>
+      <section id="galery">
+        <h2>Galery</h2>
+        <div class="grid">
+          <img src="game-of-life.png" alt="">
+          <img src="3d-game.png" alt="">
+          <img src="sudoku.jpg" alt="">
+          <img src="chess.png" alt="">
+          <img src="low-poly-world.png" alt="">
+          <img src="angkor-wat.png" alt="">
+        </div>
       </section>
-
-      <section id="game-of-life-demo" class="video-demo">
-        <h2>App Demo</h2>
-        <p>Conway's Game of Life in Java</p>
-        <video width="800" controls>
-          <source src="./game-of-life.mp4" type="video/mp4" />
-          Video Error
-        </video>
-      </section>
-
-      <section id="portfolio">
-        <h2>Portfolio:</h2>
-        <section>
-          <a href="https://vandakdominik.github.io/sudoku/">
-            <article>
-              <img src="./images/projects/sudoku.jpg" alt="sudoku image" />
-              <div>
-                <h3>Sudoku Solver</h3>
-                <p>online web Sudoku Solver using backtracking algorithm</p>
-              </div>
-            </article>
-          </a>
-        </section>
-      </section>
-      <section id="contact"></section>
-    </main>
-
-    <footer>
-      <p>Made by Dominik Vandák</p>
-      <p>
-        <a
-          id="github-link"
-          target="_blank"
-          href="https://github.com/vandakdominik"
-          >Github: https://github.com/vandakdominik</a
-        >
-      </p>
-      <p>
-        <a href="mailto:vandakdominik@gmail.com"
-          >Email: vandakdominik@gmail.com</a
-        >
-      </p>
-      <!--version: 0.1.0-->
-    </footer>
   </body>
 </html>
