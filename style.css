@@ -106,7 +106,7 @@ main {
   font-size: 1.2em;
 }
 
-#galery {
+.galery {
   display: flex;
   flex-direction: column;
   margin-top: 4em;
@@ -115,8 +115,8 @@ main {
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 0.5em;
-  row-gap: 0.5em;
+  column-gap: 1em;
+  row-gap: 1em;
 }
 
 @media(max-width: 1000px){
@@ -133,4 +133,63 @@ main {
 
 .grid img {
   width: 100%;
+}
+
+.backgroundDark {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgViewer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  padding: 25px 10px 20px 10px;
+  background-color: rgb(48, 48, 48);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.imgViewer img {
+  max-height: 75vh;
+  max-width: 85vw;
+  object-fit: contain;
+  aspect-ratio: 16/9;
+}
+
+.imgViewer .imgControls {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.imgViewer button {
+  background-color: rgb(24, 24, 24);
+  font-size: 1.15em;
+  padding: 0.2em 0.6em;
+  border-radius: 4px;
+}
+
+.imgViewer button:hover {
+  background-color: rgb(36, 36, 36);
+}
+
+.imgViewer button:active {
+  background-color: rgb(70, 70, 70);
+}
+
+.imgViewer p {
+  font-size: 1.1em;
 }

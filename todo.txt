@@ -1,0 +1,6 @@
+finish js
+make the outside box clickable (closes the window)
+add arrows (prev/next)
+add clickability to whole image (half prev/half next?) vs (whole next?)
+
+the galery changes based on aspect ratio of photos, make it so it doesnt (mby wrap picture in div and put stiles from picture to that div?)

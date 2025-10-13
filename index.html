@@ -85,16 +85,23 @@
         </article>
       </section>
 
-      <section id="galery">
+      <section class="galery">
         <h2>Galery</h2>
-        <div class="grid">
-          <img src="game-of-life.png" alt="">
-          <img src="3d-game.png" alt="">
-          <img src="sudoku.jpg" alt="">
-          <img src="chess.png" alt="">
-          <img src="low-poly-world.png" alt="">
-          <img src="3d-objects.png" alt="">
-        </div>
+        <div id="imgGalery" class="grid"></div>
       </section>
+    </main>
+      
+    <div id="backgroundDark" class="backgroundDark" style="visibility: hidden;"></div>
+    <div id="imageViewer" class="imgViewer" style="visibility: hidden;">
+        <img src="game-of-life.png" alt="">
+      <div class="imgControls">
+        <button class="imgPrev">Prev</button>
+        <p>x of x images</p>
+        <button class="imgNext">Next</button>
+      </div>
+    </div>
+
   </body>
+
+  <script src="script.js"></script>
 </html>
