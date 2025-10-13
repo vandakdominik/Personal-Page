@@ -135,6 +135,10 @@ main {
   width: 100%;
 }
 
+.grid img:hover {
+  cursor: pointer;
+}
+
 .backgroundDark {
   position: fixed;
   top: 0;
@@ -168,6 +172,10 @@ main {
   aspect-ratio: 16/9;
 }
 
+.imgViewer img:hover {
+  cursor: pointer;
+}
+
 .imgViewer .imgControls {
   margin-top: 10px;
   display: flex;
@@ -184,6 +192,7 @@ main {
 
 .imgViewer button:hover {
   background-color: rgb(36, 36, 36);
+  cursor: pointer;
 }
 
 .imgViewer button:active {
