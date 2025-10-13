@@ -45,6 +45,10 @@ class Galery {
     document.querySelector(`${imgViewerSelector} .imgNext`).addEventListener('click', () => {
       this.nextGalery();
     });
+
+    document.querySelector(`${this.imgViewerSelector} img`).addEventListener('click', () => {
+      this.nextGalery();
+    })
   };
 
   updateNumber(n){
@@ -55,9 +59,6 @@ class Galery {
     //load/update page/data
     document.querySelector(`${this.imgViewerSelector} img`).src = imgArray[this.index];
     document.querySelector(`${this.imgViewerSelector} img`).alt = imgArray[this.index].replaceAll('-', ' ');
-    document.querySelector(`${this.imgViewerSelector} img`).addEventListener('click', () => {
-      this.nextGalery();
-    })
 
     //activate element
     this.backgroundElement.style.visibility = 'visible';
