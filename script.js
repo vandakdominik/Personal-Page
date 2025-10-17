@@ -1,53 +1,53 @@
 const imgArray = ["game-of-life.png", "3d-game.png", "sudoku.jpg", "chess.png", "low-poly-world.png", "3d-objects.png"];
 
-class Galery {
+class Gallery {
   index = 0;
   arrLen; 
 
-  constructor(imgGalerySelector, imgViewerSelector, background, imgArray){
+  constructor(imgGallerySelector, imgViewerSelector, background, imgArray){
     if(imgArray.length < 1){
       throw 'Error: gallery array length < 1';
     };
     this.arrLen = imgArray.length;
 
-    this.imgGalerySelector = imgGalerySelector;
+    this.imgGallerySelector = imgGallerySelector;
     this.imgViewerSelector = imgViewerSelector;
     this.backgroundSelector = background;
     this.imgArray = imgArray;
-    this.imgGaleryElement = document.querySelector(imgGalerySelector);
+    this.imgGalleryElement = document.querySelector(imgGallerySelector);
     this.imgViewerElement = document.querySelector(imgViewerSelector);
     this.backgroundElement = document.querySelector(background);
 
-    //generate galery and put it on page (remove first # (used in js but not in html id=""))
+    //generate gallery and put it on page (remove first # (used in js but not in html id=""))
     let html = '';
     for(let i = 0; i < this.arrLen; i++){
-      html += `<img id="${imgGalerySelector.replace('#', '')}-img-${i}" src="${imgArray[i]}" alt="${imgArray[i].replaceAll('-', ' ')}">`;
+      html += `<img id="${imgGallerySelector.replace('#', '')}-img-${i}" src="${imgArray[i]}" alt="${imgArray[i].replaceAll('-', ' ')}">`;
     };
-    this.imgGaleryElement.innerHTML = html;
+    this.imgGalleryElement.innerHTML = html;
 
-    //add event listeners to galery
+    //add event listeners to gallery
     for(let i = 0; i < this.arrLen; i++){
-      document.querySelector(`${imgGalerySelector}-img-${i}`).addEventListener('click', ()=>{
+      document.querySelector(`${imgGallerySelector}-img-${i}`).addEventListener('click', ()=>{
         this.index = i;
-        this.openGalery();
+        this.openGallery();
       });
     };
 
     //close on background click
     this.backgroundElement.addEventListener('click', () => {
-      this.closeGalery();
+      this.closeGallery();
     });
 
     //connect buttons
     document.querySelector(`${imgViewerSelector} .imgPrev`).addEventListener('click', () => {
-      this.prevGalery();
+      this.prevGallery();
     });
     document.querySelector(`${imgViewerSelector} .imgNext`).addEventListener('click', () => {
-      this.nextGalery();
+      this.nextGallery();
     });
 
     document.querySelector(`${this.imgViewerSelector} img`).addEventListener('click', () => {
-      this.nextGalery();
+      this.nextGallery();
     })
   };
 
@@ -55,7 +55,7 @@ class Galery {
     document.querySelector(`${this.imgViewerSelector} p`).innerText = `${n+1} of ${this.arrLen} images`;
   };
 
-  openGalery(){
+  openGallery(){
     //load/update page/data
     document.querySelector(`${this.imgViewerSelector} img`).src = imgArray[this.index];
     document.querySelector(`${this.imgViewerSelector} img`).alt = imgArray[this.index].replaceAll('-', ' ');
@@ -66,7 +66,7 @@ class Galery {
     this.updateNumber(this.index);
   };
 
-  closeGalery(){
+  closeGallery(){
     document.querySelector(`${this.imgViewerSelector} img`).src = '';
     document.querySelector(`${this.imgViewerSelector} img`).alt = '';
 
@@ -74,14 +74,14 @@ class Galery {
     this.imgViewerElement.style.visibility = 'hidden';
   };
 
-  prevGalery(){
+  prevGallery(){
     this.index = (((this.index-1) % this.arrLen) + this.arrLen) % this.arrLen;
-    this.openGalery();
+    this.openGallery();
   };
 
-  nextGalery(){
+  nextGallery(){
     this.index = (this.index+1) % this.arrLen;
-    this.openGalery();
+    this.openGallery();
   };
 };
-const galery = new Galery('#imgGalery', '#imageViewer', '#backgroundDark', imgArray);
+const gallery = new Gallery('#imgGallery', '#imageViewer', '#backgroundDark', imgArray);
