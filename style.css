@@ -202,3 +202,12 @@ main {
 .imgViewer p {
   font-size: 1.1em;
 }
+
+/*temporary*/
+main > div {
+  margin-top: 1.6em;
+}
+main > div > a {
+  font-size: 2em;
+  margin-right: 1em;
+}
